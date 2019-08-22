@@ -1,8 +1,9 @@
-﻿// Learn more about F# at http://fsharp.org
-
-open System
+﻿open System
 
 [<EntryPoint>]
 let main argv =
-    printfn "Hello World from F#!"
-    0 // return an integer exit code
+    let token = System.Environment.GetEnvironmentVariable("GITHUB_TOKEN")
+    let client = new GitHubClient(new ProductHeaderValue("example"))
+    let basicAuth = new Credentials(token)
+
+    0

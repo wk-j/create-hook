@@ -2,7 +2,7 @@ name: dotnet
 
 on: [push]
 
-job:
+jobs:
   build:
     steps:
       - name: Hello

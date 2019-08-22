@@ -1,0 +1,9 @@
+name: dotnet
+
+on: [push]
+
+job:
+  build:
+    steps:
+      - name: Hello
+        run: echo Hello, world!
